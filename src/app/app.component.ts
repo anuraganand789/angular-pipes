@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FlyingHeroesComponent } from './flying-heroes/flying-heroes.component';
 
 @Component({
   selector: 'app-root',

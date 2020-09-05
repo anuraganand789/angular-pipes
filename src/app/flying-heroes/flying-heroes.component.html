@@ -1,0 +1,26 @@
+<p> New Hero :-
+    <input #heroName (keyup.enter)="addHero(heroName.value); heroName.value=''" placeholder="Hero Name">
+
+    Change Array Reference :- 
+    <input #checkMutateRef type="checkbox" [checked]="canMutate" (change)="mutate(checkMutateRef.checked)">
+
+    Can Fly :- 
+    <input #checkCanFly    type="checkbox" [checked]="canFly" (change)="fly(checkCanFly.checked)">
+
+    <button (click)="reset()">Reset</button>
+</p>
+
+<h3>All Heroes</h3>
+<div *ngFor="let hero of heroes">
+        Name : - {{hero.name}} Can fly :- {{ hero.canFly }}
+</div>
+
+<h3>Heroes That Can Fly using Pure Pipe</h3>
+<div *ngFor="let hero of (heroes | flyingHeroesPure)">
+    Name:- {{hero.name}} Can Fly :- {{hero.canFly}}
+</div>
+
+<h3>Flying Heroes Impure pipe</h3>
+<div *ngFor="let hero of (heroes | flyingHeroesImpure)">
+    Name:- {{hero.name}}  Can Fly :- {{hero.canFly}}
+</div>
