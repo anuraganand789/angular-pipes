@@ -13,6 +13,18 @@ export class AppComponent {
   power     = 10;
   factor    = 1;
 
+  setTitle(keyboardEvent: KeyboardEvent) {
+    this.title = (keyboardEvent.target as HTMLInputElement).value;
+  }
+
+  setFactor(keyboardEvent: KeyboardEvent){
+    this.factor = +(keyboardEvent.target as HTMLInputElement).value;
+  }
+
+  setPower(keyboardEvent: KeyboardEvent){
+    this.power = +(keyboardEvent.target as HTMLInputElement).value;
+  }
+
   get format() { return this.toggle ? 'shortDate' : 'fullDate' ; }
   toggleDateFormat() { this.toggle = !this.toggle; }
 }

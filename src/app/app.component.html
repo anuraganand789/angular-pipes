@@ -1,11 +1,11 @@
 <h1> {{ birthDay | date:format | uppercase }} </h1>
-<div> Title <input [(ngModel)]="title"> </div>
+<div> Title <input [value]="title" (keyup)="setTitle($event)"> </div>
 <h1>{{title | uppercase | repeatString:5}}</h1>
 <h1> {{ amount | currency:'INR' }} </h1>
 <button (click)="toggleDateFormat()">Toggle Date Format</button>
 
-<div> Normal Power: <input [(ngModel)]="power" ></div>
-<div> Boost Factor: <input [(ngModel)]="factor"></div>
+<div> Number = <input (value)="power" (keyup)="setPower($event)"></div> 
+<div> Factor = <input (value)="factor" (keyup)="setFactor($event)"></div>
 <p>
 Boosted Value :- {{ power | boostTheNumber: factor }}
 </p>
