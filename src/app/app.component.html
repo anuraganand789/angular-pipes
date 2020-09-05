@@ -1,1 +1,11 @@
-<h1>{{title | uppercase}}</h1>
+<h1> {{ birthDay | date:format | uppercase }} </h1>
+<div> Title <input [(ngModel)]="title"> </div>
+<h1>{{title | uppercase | repeatString:5}}</h1>
+<h1> {{ amount | currency:'INR' }} </h1>
+<button (click)="toggleDateFormat()">Toggle Date Format</button>
+
+<div> Normal Power: <input [(ngModel)]="power" ></div>
+<div> Boost Factor: <input [(ngModel)]="factor"></div>
+<p>
+Boosted Value :- {{ power | boostTheNumber: factor }}
+</p>
