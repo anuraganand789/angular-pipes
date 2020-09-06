@@ -9,6 +9,7 @@ import { BoostTheNumberPipe } from './boost-the-number.pipe';
 import { FlyingHeroesComponent } from './flying-heroes/flying-heroes.component';
 import { FlyingHeroesPurePipe } from './flying-heroes-pure.pipe';
 import { FlyingHeroesImpurePipe } from './flying-heroes-impure.pipe';
+import { HeroAsyncMessageComponent } from './hero-async-message.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FlyingHeroesImpurePipe } from './flying-heroes-impure.pipe';
     BoostTheNumberPipe,
     FlyingHeroesComponent,
     FlyingHeroesPurePipe,
-    FlyingHeroesImpurePipe
+    FlyingHeroesImpurePipe,
+    HeroAsyncMessageComponent
   ],
   imports: [
     BrowserModule,
